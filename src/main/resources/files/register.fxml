@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="399.0" prefWidth="654.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.csc325_firebase_webview_auth.view.register">
+    <children>
+        <MenuBar maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="close" mnemonicParsing="false" onAction="#Close" text="Close" />
+                        <MenuItem fx:id="goBack" mnemonicParsing="false" onAction="#GoBack" text="Go Back" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label layoutX="14.0" layoutY="48.0" text="Please Enter The Information" />
+        <TextField fx:id="firstName" layoutX="14.0" layoutY="80.0" prefHeight="26.0" prefWidth="625.0" promptText="First Name" />
+        <TextField fx:id="lastName" layoutX="14.0" layoutY="122.0" prefHeight="26.0" prefWidth="625.0" promptText="Last Name" />
+        <TextField fx:id="email" layoutX="14.0" layoutY="167.0" prefHeight="26.0" prefWidth="625.0" promptText="Email" />
+        <TextField fx:id="password" layoutX="14.0" layoutY="211.0" prefHeight="26.0" prefWidth="625.0" promptText="Password" />
+        <TextField fx:id="phoneNumber" layoutX="14.0" layoutY="259.0" prefHeight="26.0" prefWidth="625.0" promptText="Phone Number" />
+        <Button fx:id="registerButton" layoutX="14.0" layoutY="321.0" mnemonicParsing="false" onAction="#rbutton" prefHeight="26.0" prefWidth="625.0" text="Register" textFill="#da1212">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
+    </children>
+
+</AnchorPane>
