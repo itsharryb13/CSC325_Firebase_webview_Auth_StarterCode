@@ -17,6 +17,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -24,6 +25,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
+
+import static com.example.csc325_firebase_webview_auth.view.App.scene;
 
 public class AccessFBView {
 
@@ -54,6 +58,7 @@ public class AccessFBView {
         majorField.textProperty().bindBidirectional(accessDataViewModel.userMajorProperty());
         writeButton.disableProperty().bind(accessDataViewModel.isWritePossibleProperty().not());
     }
+
 
     @FXML
     private void addRecord(ActionEvent event) {
@@ -136,6 +141,20 @@ public class AccessFBView {
         }
     }
 
+    @FXML
+    public void register() throws IOException {
+        System.out.println ("Register Menu Button called");
+        App.setRoot("/files/Register.fxml");
+    }
+
+    @FXML
+    public void Close() throws IOException {
+        System.out.println("Close Menu button called");
+        Platform.exit();
+    }
+
+
+
     public boolean registerUser() {
         UserRecord.CreateRequest request = new UserRecord.CreateRequest()
                 .setEmail("user@example.com")
@@ -157,4 +176,7 @@ public class AccessFBView {
         }
 
     }
+
+
+
 }
